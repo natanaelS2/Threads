@@ -7,7 +7,7 @@ public class VerificaNumerosPrimos {
         for (String arg : args) {
             int numero = Integer.parseInt(arg);
             Thread n = new Thread(() -> {
-                if (isNumeroPrime(numero)) {
+                if (isNumeroPrimo(numero)) {
                     System.out.println("O número " + numero + " é primo.");
                 } else {
                     System.out.println("O número " + numero + " não é primo.");
@@ -25,7 +25,7 @@ public class VerificaNumerosPrimos {
         }
     }
 
-    private static boolean isNumeroPrime(int numero) {
+    private static boolean isNumeroPrimo(int numero) {
         if (numero <= 1) return false;
         int i;
         for ( i = 2; i <= Math.sqrt(numero); i++) {
